@@ -1,0 +1,38 @@
+{
+  "name": "chatbot-extension",
+  "displayName": "ChatBot Extension",
+  "description": "A VS Code extension for ChatBot",
+  "version": "0.0.1",
+  "publisher": "Your Name",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.openChat"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.openChat",
+        "title": "Open ChatBot"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc",
+    "watch": "tsc -w",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.2",
+    "vscode": "^1.60.0",
+    "typescript": "^4.9.5"
+  },
+  "author": "",
+  "license": "ISC"
+}
